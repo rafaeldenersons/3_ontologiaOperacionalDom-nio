@@ -1,0 +1,611 @@
+# Design annotations 
+ 
+:VocabularioOrganizacaoAcademica a skos:ConceptScheme ;
+skos:prefLabel "Vocabulário de Organização Acadêmica"@pt ;
+skos:note "Lista de vocabulários para a organização acadêmica da IES, disponível em no dicionário de dados dos microdados do INEP"@pt .
+
+:CentroFederalEducacaoTecnologica a skos:Concept ;
+skos:topConceptOf:VocabularioOrganizacaoAcademica;
+skos:inScheme:VocabularioOrganizacaoAcademica;
+skos:prefLabel "Centro Federal de Educação Tecnológica"@pt .
+
+:CentroUniversitario a skos:Concept ;
+skos:topConceptOf:VocabularioOrganizacaoAcademica;
+skos:inScheme:VocabularioOrganizacaoAcademica;
+skos:prefLabel "Centro Universitário"@pt .
+
+:Faculdade a skos:Concept ;
+skos:topConceptOf:VocabularioOrganizacaoAcademica;
+skos:inScheme:VocabularioOrganizacaoAcademica;
+skos:prefLabel "Faculdade"@pt .
+
+:InstitutoFederalEducacaoCienciaTecnologia a skos:Concept ;
+skos:topConceptOf:VocabularioOrganizacaoAcademica;
+skos:inScheme:VocabularioOrganizacaoAcademica;
+skos:prefLabel "Instituto Federal de Educação,Ciência e Tecnologia"@pt .
+
+:Universidade a skos:Concept ;
+skos:topConceptOf:VocabularioOrganizacaoAcademica;
+skos:inScheme:VocabularioOrganizacaoAcademica;
+skos:prefLabel "Universidade"@pt .
+
+# Design annotations 
+
+:VocabularioCategoriaAdministrativa a skos:ConceptScheme ;
+skos:prefLabel "Vocabulário de Categoria Academica"@pt ;
+skos:note "Lista de vocabulários para a classificação da categoria administrativa das IES, disponível em no dicionário de dados dos microdados do INEP"@pt .
+
+:Especial a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Especial"@pt .
+
+:PublicaEstadual a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Pública Estadual"@pt .
+
+:PublicaFederal a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Pública Federal"@pt .
+
+:PublicaMunicipal a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Pública Municipal"@pt .
+
+:PrivadaComFinsLucrativos a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Privada sem fins lucrativos"@pt .
+
+:PrivadaParticularSentidoEstrito a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Privada - Particular em sentido estrito"@pt .
+
+:PrivadaSemFinsLucrativos a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Privada com fins lucrativos"@pt .
+
+:PrivadaComunitaria a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Privada comunitária"@pt .
+
+:PrivadaConfessional a skos:Concept ;
+skos:topConceptOf:VocabularioCategoriaAdministrativa;
+skos:inScheme:VocabularioCategoriaAdministrativa;
+skos:prefLabel "Privada confessional"@pt.
+
+# Design annotations
+
+:InstituicaoEnsinoSuperior
+rdfs:label "Instituição de Ensino Superior"@pt;
+rdfs:comment "Diz respeito à Instituição que fornece um ensino superior aceito pela autoridade competente e faz parte da integração do sistema de ensino superior"@pt;
+owl:equivalentClass wdo:Q2385804, #(educational institution)
+                    wdo:Q5341295, #(educational organization)
+                    wdo:Q1211427, # (academia)
+                    schema:EducationalOrganization,                                 
+                    cwrc:EducationalOrganization,
+                    sio:SIO_000290,
+                    dbo:EducationalInstitution,
+                    pext:EducationalOrganization,
+                    pext:University.
+rdfs:comment "Bases promissoras para reconciliação de indivíduos e enriquecimento semântico com owl:sameAs = wde".
+
+:siglaIES 
+a owl:FunctionalProperty;
+rdfs:label "sigla da IES"@pt;
+rdfs:comment "Acrônimo da Instituição de Ensino Superior"@pt;
+owl:equivalentProperty vivo:abbreviation.
+
+:nomeIES
+a owl:FunctionalProperty;
+rdfs:label "nome da IES"@pt;
+rdfs:comment "Nome completo e por extenso da Instituição de Ensino Superior"@pt;
+owl:equivalentProperty bibframe:grantingInstitution,
+                       wdo:PP1813, # (short name).
+
+
+:uriIES
+a owl:functionalProperty
+rdfs:label "uri da IES"@pt
+rdfs:comment "URI da Instituição de Ensino Superior"@pt
+owl:equivalentProperty dqm:hasURI. 
+
+:unidadeIES
+a owl:functionalProperty
+rdfs:label "unidade"@pt
+rdfs:comment "unidade da Instituição de Ensino Superior (IES). Diz respeito ao campus da IES. É definido com o termo 'Campus' seguido do município que a IES está localizada."@pt.
+
+:cnpjIES
+a owl:functionalProperty
+rdfs:label "CNPJ"@pt
+rdfs:comment "Diz respeito ao Cadastro de Pessoa Jurídica da IES."@pt.
+
+# Design annotations 
+ 
+:Pessoa
+rdfs:label "Pessoa"@pt;
+rdfs:comment "Criatura humana ou indivíduo humano enquanto sujeito de direitos e deveres."@pt;
+owl:equivalentClass schema:Person.
+
+:nomePessoa
+a owl:FunctionalProperty;
+rdfs:label "nome da pessoa"@pt;
+rdfs:comment "Nome completo e por extenso da pessoa"@pt;
+owl:equivalentProperty foaf:name,
+                       dc:name.
+
+:funcaoPessoa
+a owl:FunctionalProperty;
+rdfs:label "função"@pt;
+rdfs:comment "Função exercida por uma pessoa."@pt;
+owl:equivalentProperty bibframe:role.
+
+:emailInstitucionalPessoa
+a owl:FunctionalProperty;
+rdfs:label "e-mail institucional"@pt;
+rdfs:comment "Trata-se do e-mail Institucional de uma pessoa."@pt;
+owl:equivalentProperty foaf:mbox,
+                       pext:hasEMail.
+
+:emailAlternativoPessoa
+a owl:FunctionalProperty;
+rdfs:label "e-mail alternativo"@pt;
+rdfs:comment "Trata-se do e-mail alternativo de uma pessoa."@pt;
+owl:equivalentProperty foaf:mbox,
+                       pext:hasEMail,
+                       km4c:alternativeEmail.
+
+:cpfPessoa
+a owl:FunctionalProperty;
+rdfs:label "CPF"@pt;
+rdfs:comment "Trata-se do Cadastro de Pessoa Física de uma pessoa."@pt.
+
+# Design annotations 
+
+:VocabularioIdioma a skos:ConceptScheme ;
+skos:prefLabel "Vocabulário de Idioma"@pt ;
+skos:note "Lista de vocabulários para a classificação de idioma para documentos de um Trabalho de Conclusão de Curso, estando disponível os cinco idiomas no portal da CAPES, além de existir outros no Ethnologue: languages of the world."@pt .
+
+:Alemao a skos: Concept ;
+skos:topConceptOf:VocabularioIdioma;
+skos:inScheme:VocabularioIdioma;
+skos:prefLabel "Alemão"@pt.
+
+:Espanho a skos: Concept ;
+skos:topConceptOf:VocabularioIdioma;
+skos:inScheme:VocabularioIdioma;
+skos:prefLabel "Espanho"@pt.
+
+:Frances a skos:Concept ;
+skos:topConceptOf:VocabularioIdioma;
+skos:inScheme:VocabularioIdioma;
+skos:prefLabel "Francês"@pt.
+
+Ingles a skos:Concept ;
+skos:topConceptOf:VocabularioIdioma;
+skos:inScheme:VocabularioIdioma;
+skos:prefLabel "Inglês"@pt.
+
+:Italiano a skos:Concept ;
+skos:topConceptOf:VocabularioIdioma;
+skos:inScheme:VocabularioIdioma;
+skos:prefLabel "Italiano"@pt.
+
+# Design annotations 
+ 
+:Acervo
+rdfs:label "Acervo"@pt;
+rdfs:comment "Local que contém todos os documentos depositados em suas bibliotecas e que estão à disposição do público para estudo e pesquisa, na dependência específica de reprodução."@pt;
+owl:equivalentClass fabio:WorkCollection,
+                    fabio:DocumentRepository.
+								 
+# Design annotations 
+ 
+:Cadastrador
+rdfs:label "Cadastrador"@pt;
+rdfs:comment "Trata-se de quem cadastra as teses e as dissertações em um Acervo."@pt;
+owl:equivalentClass caresses:User.
+
+# Design annotations 
+ 
+:Digitalizador
+rdfs:label "Digitalizador"@pt;
+rdfs:comment "Trata-se de uma pessoa institucionalizada que digitaliza as teses e as dissertações."@pt.
+
+# Design annotations 
+  
+:VocabularioPDF a skos:ConceptScheme;
+skos:prefLabel "Classificação de PDF"@pt;
+skos:note "Lista de vocabulários para classificação de PDF para documentos de um Trabalho de Conclusão de Curso, estando disponível no formato digital, estando à disposição no site oficial Portable Document Format (PDF)."@pt
+ 
+:PDF_A1a a skos: Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-1a"@pt.
+
+:PDF_A1b a skos: Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-1b"@pt.
+
+:PDF_A21 a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-21"@pt.
+
+:PDF_A2b a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-2b"@pt.
+
+:PDF_A2u a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-2u"@pt.
+
+:PDF_A3a a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-3a"@pt.
+
+:PDF_A3b a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF_A3b"@pt.
+
+:PDF_A3u a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-3u"@pt.
+
+:PDF_A4f a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-4f"@pt.
+
+:PDF_A4e a skos:Concept;
+skos:topConceptOf:VocabularioPDF;
+skos:inScheme:VocabularioPDF;
+skos:prefLabel "PDF/A-4e"@pt.
+
+# Design annotations 
+ 
+:Documento
+rdfs:label "Documento"@pt;
+rdfs:comment "Trata-se de um documento digital ou impresso para o contexto aplicado."@pt;
+owl:equivalentClass foaf:Document,
+                    dbpedia:Documento.
+
+:identificacaoUnicaDocumento
+a owl:FunctionalProperty;
+rdfs:label "identificação única"@pt;
+rdfs:comment "Trata-se de uma identificação inequívoca de um documento."@pt;
+owl:equivalentProperty dc:identifier,
+                       fabio:identifier.
+
+:tituloDocumento
+a owl:FunctionalProperty;
+rdfs:label "título"@pt;
+rdfs:comment "Trata-se do título de um documento."@pt;
+owl:equivalentProperty bibframe:title,
+                       fabio:title.
+
+:resumoDocumento
+a owl:FunctionalProperty;
+rdfs:label "resumo"@pt;
+rdfs:comment "Trata-se do resumo de um documento."@pt;
+owl:equivalentProperty dc:abstract,
+                       bibframe:summary,
+                       fabio:abstract.
+
+:abstractDocumento
+a owl:FunctionalProperty;
+rdfs:label "abstract"@pt;
+rdfs:comment "Trata-se do abstract de um documento."@pt;
+owl:equivalentProperty dc:abstract,
+                       bibframe:summary,
+                       fabio:abstract.
+
+:semestreLetivoDocumento
+a owl:FunctionalProperty;
+rdfs:label "semestre letivo"@pt;
+rdfs:comment "Trata-se do semestre letivo de um documento."@pt;
+owl:equivalentProperty ov:semester.
+
+:numeroPaginasDocumento
+a owl:FunctionalProperty;
+rdfs:label "número de páginas"@pt;
+rdfs:comment "Trata-se do número de páginas de um documento."@pt;
+owl:equivalentProperty bibframe:count,
+                       fabio:hasPageCount.
+
+:uriDisseminacaoDocumento
+a owl:FunctionalProperty;
+rdfs:label "uri disseminação"@pt;
+rdfs:comment "Trata-se da uri a ser disseminada de um documento."@pt;
+owl:equivalentProperty meb:uri. #(meb)
+
+:disseminarMetadadoDocumento
+a owl:FunctionalProperty;
+rdfs:label "disseminar metadado"@pt;
+rdfs:comment "Trata-se de indicar se a disseminação de um metadado relacionado a um documento será ou não realizada."@pt;
+owl:equivalentProperty dc:publisher.
+
+# Design annotations 
+ 
+:Cadastro
+rdfs:label "Cadastro"@pt;
+rdfs:comment "."@pt;
+owl:equivalentClass fabio:ArchivalRecordSet.
+
+:identificadorRegistroCadastro
+a owl:FunctionalProperty;
+rdfs:label "identificador do registro"@pt;
+rdfs:comment "Diz respeito ao identificador único de um registro quanto ao Cadastro referente ao Trabalho de Conclusão de Curso que ocorre no acervo."@pt;
+owl:equivalentProperty frapo:identifier.
+
+:dataHoraRegistroCadastro
+a owl:FunctionalProperty;
+rdfs:label "data/hora do registro"@pt;
+rdfs:comment "Diz respeito a data/hora de um registro quanto ao Cadastro referente ao Trabalho de Conclusão de Curso que ocorre no acervo."@pt;
+owl:equivalentProperty fabio:hasDateCollected,
+                       bibframe:date,
+                       dc:date,
+                       dc:dateSubmitted.
+
+# Design annotations 
+ 
+:TrabalhoConclusaoCurso
+rdfs:label "Trabalho de Conclusão de Curso"@pt;
+rdfs:comment "Deve ser um trabalho acadêmico de finalização do curso, sendo necessariamente, pelo menos, na modalidade de uma monografia, ou outros trabalhos técnicos associados quando previstos.
+São trabalhos que retratam o resultado de estudo ou pesquisa sobre um tema, sejam eles exigidos por disciplina, módulo, estudo independente, curso e programa."@pt;
+owl:equivalentClass schema:Thesis,
+                    fabio:ScholarlyWork,
+                    frbrer:C1004,
+                    dbpedia:Trabalho_de_conclusão_de_curso.
+
+# Design annotations 
+ 
+:Documento Impresso
+rdfs:label "Documento Impresso"@pt;
+rdfs:comment "São artefatos digitais. Qualquer escrito ou impresso que fornece uma informação ou prova, usado para esclarecimento de algo. Neste caso, trata-se de Trabalhos de Conclusão de Curso como Teses e Dissertações."@pt.
+
+# Design annotations 
+ 
+:DocumentoDigital
+rdfs:label "Documento Digital"@pt;
+rdfs:comment "Entende-se por documento digital a conversão da fiel imagem de um documento para o código digital.Trata-se de um documento que pode ser digitalizado (o ato ou o efeito da conversão de um documento que contém informação ou dados analógicos para um formato digital) ou nato digital (documento que já nasce digitalmente)."@pt;
+owl:equivalentClass fabio: DigitalItem.
+
+:nomePdfDocumentoDigital
+a owl:FunctionalProperty;
+rdfs:label "nome do PDF"@pt;
+rdfs:comment "Diz respeito ao nome do PDF."@pt;
+owl:equivalentProperty foaf:name.
+
+:tipoPdfDocumentoDigital
+a owl:FunctionalProperty;
+rdfs:label "tipo do PDF"@pt;
+rdfs:comment "Diz respeito ao tipo do PDF (Os tipos de PDF são: PDF/A-1a, PDF/A-1b, PDF/A-21, PDF/A-2b, PDF/A-2u, PDF/A-3a, PDF/A-3b, PDF/A-3u, PDF/A-4f, PDF/A-4e)."@pt;
+owl:equivalentProperty bibframe:digitalCharacteristic.
+
+:tamanhoKilobitesDocumentoDigital
+a owl:FunctionalProperty;
+rdfs:label "tamanho em kilobites"@pt;
+rdfs:comment "Diz respeito ao tamanho em kilobites."@pt;
+owl:equivalentProperty bibframe:FileSize.
+
+:descricaoAnexosDocumentoDigital
+a owl:FunctionalProperty;
+rdfs:label "descrição dos anexos"@pt;
+rdfs:comment "Diz respeito a descrição dos anexos."@pt;
+owl:equivalentProperty bibframe:supplementaryContent.								 
+
+# Design annotations 
+ 
+:NatoDigital
+rdfs:label "Nato Digital"@pt;
+rdfs:comment "É um documento que já nasce em formato digital. Elaborado originalmente em meio eletrônico como documento, contrato, diploma, publicação, material, conteúdo, etc. Trata-se de uma modalidade digital."@pt.
+
+# Design annotations 
+ 
+:Digitalizado
+rdfs:label "Digitalizado"@pt;
+rdfs:comment "É a representação digital do processo de digitalização do documento físico e seus metadados, isto é, trata-se de um documento digital no estado digitalizado. Um documento deste tipo tem o mesmo efeito jurídico conferido aos documentos microfilmados, nos termos da Lei nº 5.433, de 8 de maio de 1968, e de regulamentação posterior. São documentos no formato digital e que foram digitalizados (eram físicos mas passaram a ser documentos digitais)."@pt;
+
+:dataDigitalizacaoDigitalizado
+a owl:FunctionalProperty;
+rdfs:label "data da digitalização"@pt;
+rdfs:comment "Diz respeito a data de digitalização de um Documento Digital Digitalizado."@pt;
+owl:equivalentProperty fabio: hasAccessDate,
+                       bibframe:date,
+                       dc:date,
+                       dcndl:dateDigitized.
+
+:modoOcrImagemDigitalizado
+a owl:FunctionalProperty;
+rdfs:label "modo OCR imagem"@pt;
+rdfs:comment "Diz respeito ao modo OCR imagem."@pt;
+owl:equivalentProperty bibframe:media.
+
+# Design annotations 
+ 
+:Local
+rdfs:label "Local"@pt;
+rdfs:comment "Trata-se do lugar físico ou virtual de registro do Trabalho de Conclusão de Curso. Quanto ao local físico, refere-se ao nome da cidade de apresentação do trabalho acadêmico. Neste caso, refere-se ao Trabalho de Conclusão de Curso de pós-graduação stricto sensu (dissertação ou tese). Quando se refere ao local virtual, diz respeito ao nome do caminho ou diretório de um computador ou no âmbito Web."@pt;
+owl:equivalentClass bibframe:Place,
+                    schema:Place,
+                    dc:Location.
+								 
+# Design annotations 
+ 
+:LocalVirtual
+rdfs:label "Local Virtual"@pt;
+rdfs:comment "Trata-se do caminho virtual dos documentos acadêmicos e institucionais . Refere-se ao caminho do computador ou na internet que pode tratar um lugar virtual como se fosse um lugar físico, mas o local virtual é, na realidade, uma parte da memória do computador usada como se fosse um local físico."@pt;
+
+:descricaoCaminhoLocalVirtual
+a owl:FunctionalProperty;
+rdfs:label "descrição do caminho"@pt;
+rdfs:comment "Diz respeito a descrição do um caminho de um Documento Digital que é guardado em um Local Virtual."@pt;
+owl:equivalentProperty.
+
+# Design annotations 
+ 
+:LocalFisico
+rdfs:label "Local Físico"@pt;
+rdfs:comment "Trata-se do local físico (concreto) dos documentos acadêmicos e institucionais."@pt;
+owl:equivalentClass bibframe:Place,
+                    schema:Place,
+                    dc:Location.
+
+rdfs:comment "Bases promissoras para reconciliação de indivíduos e enriquecimento semântico com owl:sameAs = wde, gn" .
+
+:cidadeLocalFisico
+a owl:FunctionalProperty;
+rdfs:label "cidade"@pt;
+rdfs:comment "Diz respeito ao nome da cidade e que corresponde ao local físico."@pt;
+owl:equivalentProperty wdo:Q82799, #(name)
+                       schema:name,
+                       gn:name.
+
+:estadoLocalFisico
+a owl:FunctionalProperty;
+rdfs:label "estado"@pt;
+rdfs:comment "Diz respeito ao nome do estado e que corresponde ao local físico."@pt;
+owl:equivalentProperty wdo:Q82799, #(name)
+                       schema:name,
+                       gn:name.
+
+:paisLocalFisico
+a owl:FunctionalProperty;
+rdfs:label "país"@pt;
+rdfs:comment "Diz respeito ao nome do país e que corresponde ao local físico."@pt;
+owl:equivalentProperty wdo:Q82799, #(name)
+                       schema:name,
+                       gn:name.
+
+# Design annotations
+
+:PalavraChave
+rdfs:label "Palavra-Chave"@pt;
+rdfs:comment "Termo que resume as ideias ou temas centrais de uma obra. Trata-se da palavra que identifica um elemento particular ou o seu conteúdo."@pt;
+owl:equivalentClass sio:SIO_000147.
+
+:termoPortuguesPalavraChave
+a owl:FunctionalProperty;
+rdfs:label "termo em Português"@pt;
+rdfs:comment "Diz respeito ao termo da palavra-chave em português."@pt;
+owl:equivalentProperty fabio:keyword,
+                       schema:keywords.
+                                     
+:termoInglesPalavraChave
+a owl:FunctionalProperty;
+rdfs:label "termo em Inglês"@pt;
+rdfs:comment "Diz respeito ao termo da palavra-chave em Inglês."@pt;
+owl:equivalentProperty fabio:keyword,
+                       schema:keywords.									  
+
+# Design annotations 
+ 
+:temOrganizacaoAcademica
+a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:FunctionalProperty ;
+rdfs:label "tem organização acadêmica"@pt;
+
+# Design annotations 
+ 
+:temCategoriaAdministrativa
+a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:FunctionalProperty ;
+rdfs:label "tem categoria administrativa"@pt;
+
+# Design annotations 
+ 
+:pertenceIES
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "pertence"@pt .
+rdfs:comment "Acervo pertence a Instituição de Ensino Superior."@pt;
+
+# Design annotations 
+ 
+:ocorreNoAcervo
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "ocorre no acervo"@pt .
+rdfs:comment "Cadastro ocorre no Acervo."@pt;
+
+# Design annotations 
+ 
+:localizadaEmLocalFisico
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "localizada em local físico"@pt .
+rdfs:comment "Instituição de Ensino Superior fica localizada em um Local Físico."@pt
+owl:equivalentPropert wdo:Q82799, #(name)
+                      schema:name,
+                      gn:name.
+									
+# Design annotations 
+ 
+:referenteTCC
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "referente ao TCC"@pt .
+rdfs:comment "Cadastro é referente ao Trabalho de Conclusão de Curso."@pt;
+
+# Design annotations 
+ 
+:registraCadastro
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "registra cadastro"@pt .
+rdfs:comment "Cadastrador registra o Cadastro."@pt
+owl:equivalentPropert dcat:record,
+                      ptop:registeredIn.
+
+# Design annotations 
+ 
+:digitalizaDocumento
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "digitaliza documento"@pt .
+rdfs:comment "Digitalizador digitaliza o Documento."@pt
+owl:equivalentPropert iol:isEncodedBy.
+
+# Design annotations 
+ 
+:temVocabularioIdioma
+a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:FunctionalProperty ;
+rdfs:label "tem vocabulário de idioma"@pt.
+
+# Design annotations 
+ 
+:temTipoPDF
+a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:FunctionalProperty ;
+rdfs:label "tem tipo de PDF"@pt.
+
+# Design annotations 
+ 
+:compostoPorPalavraChave
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "composto por palavra-chave"@pt .
+rdfs:comment "Trabalho de Conclusão de Curso é composto por composto por palavra-chave."@pt
+owl:equivalentPropert schema:keywords,
+                      fabio:keyword.
+
+# Design annotations 
+ 
+:armazenadoNoLocalFisico
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "é armazenado no local físico"@pt ;
+rdfs:comment "Documento Impresso é armazenado em um Local Físico."@pt;
+owl:equivalentPropert dcat:record,
+                      ptop:registeredIn.
+
+# Design annotations 
+ 
+:guardado
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "é guardado"@pt ;
+rdfs:comment "Documento Digital é guardado em um Local Virtual."@pt;
+owl:equivalentPropert dcat:record,
+                      ptop:registeredIn.									

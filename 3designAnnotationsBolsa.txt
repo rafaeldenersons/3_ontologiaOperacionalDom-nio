@@ -1,0 +1,296 @@
+# Design annotations
+
+:InstituicaoEnsinoSuperior
+rdfs:label "Instituição de Ensino Superior"@pt;
+rdfs:comment "Diz respeito à Instituição que fornece um ensino superior aceito pela autoridade competente e faz parte da integração do sistema de ensino superior"@pt;
+owl:equivalentClass wdo:Q2385804, #(educational institution)
+                    wdo:Q5341295, #(educational organization)
+                    wdo:Q1211427, # (academia)
+                    schema:EducationalOrganization,                                 
+                    cwrc:EducationalOrganization,
+                    sio:SIO_000290,
+                    dbo:EducationalInstitution,
+                    pext:EducationalOrganization,
+                    pext:University.
+rdfs:comment "Bases promissoras para reconciliação de indivíduos e enriquecimento semântico com owl:sameAs = wde".
+
+:siglaIES 
+a owl:FunctionalProperty;
+rdfs:label "sigla da IES"@pt;
+rdfs:comment "Acrônimo da Instituição de Ensino Superior"@pt;
+owl:equivalentProperty vivo:abbreviation.
+
+:nomeIES
+a owl:FunctionalProperty;
+rdfs:label "nome da IES"@pt;
+rdfs:comment "Nome completo e por extenso da Instituição de Ensino Superior"@pt;
+owl:equivalentProperty bibframe:grantingInstitution,
+                       wdo:PP1813, # (short name).
+
+:uriIES
+a owl:functionalProperty
+rdfs:label "uri da IES"@pt
+rdfs:comment "URI da Instituição de Ensino Superior"@pt
+owl:equivalentProperty dqm:hasURI. 
+
+:unidadeIES
+a owl:functionalProperty
+rdfs:label "unidade"@pt
+rdfs:comment "unidade da Instituição de Ensino Superior (IES). Diz respeito ao campus da IES. É definido com o termo 'Campus' seguido do município que a IES está localizada."@pt.
+
+:cnpjIES
+a owl:functionalProperty
+rdfs:label "CNPJ"@pt
+rdfs:comment "Diz respeito ao Cadastro de Pessoa Jurídica da IES."@pt.
+
+# Design annotations 
+ 
+:Acervo
+rdfs:label "Acervo"@pt;
+rdfs:comment "Local que contém todos os documentos depositados em suas bibliotecas e que estão à disposição do público para estudo e pesquisa, na dependência específica de reprodução."@pt;
+owl:equivalentClass fabio:WorkCollection,
+                                 fabio:DocumentRepository.
+								 
+# Design annotations 
+ 
+:Cadastro
+rdfs:label "Cadastro"@pt;
+rdfs:comment "."@pt;
+owl:equivalentClass fabio:ArchivalRecordSet.
+
+:identificadorRegistroCadastro
+a owl:FunctionalProperty;
+rdfs:label "identificador do registro"@pt;
+rdfs:comment "Diz respeito ao identificador único de um registro quanto ao Cadastro referente ao Trabalho de Conclusão de Curso que ocorre no acervo."@pt;
+owl:equivalentProperty frapo:identifier.
+
+:dataHoraRegistroCadastro
+a owl:FunctionalProperty;
+rdfs:label "data/hora do registro"@pt;
+rdfs:comment "Diz respeito a data/hora de um registro quanto ao Cadastro referente ao Trabalho de Conclusão de Curso que ocorre no acervo."@pt;
+owl:equivalentProperty fabio:hasDateCollected,
+                       bibframe:date,
+                       dc:date,
+                       dc:dateSubmitted.
+
+# Design annotations 
+ 
+:Pessoa
+rdfs:label "Pessoa"@pt;
+rdfs:comment "Criatura humana ou indivíduo humano enquanto sujeito de direitos e deveres."@pt;
+owl:equivalentClass schema:Person.
+
+:nomePessoa
+a owl:FunctionalProperty;
+rdfs:label "nome da pessoa"@pt;
+rdfs:comment "Nome completo e por extenso da pessoa"@pt;
+owl:equivalentProperty foaf:name,
+                       dc:name.
+
+:funcaoPessoa
+a owl:FunctionalProperty;
+rdfs:label "função"@pt;
+rdfs:comment "Função exercida por uma pessoa."@pt;
+owl:equivalentProperty bibframe:role.
+
+:emailInstitucionalPessoa
+a owl:FunctionalProperty;
+rdfs:label "e-mail institucional"@pt;
+rdfs:comment "Trata-se do e-mail Institucional de uma pessoa."@pt;
+owl:equivalentProperty foaf:mbox,
+                       pext:hasEMail.
+
+:emailAlternativoPessoa
+a owl:FunctionalProperty;
+rdfs:label "e-mail alternativo"@pt;
+rdfs:comment "Trata-se do e-mail alternativo de uma pessoa."@pt;
+owl:equivalentProperty foaf:mbox,
+                       pext:hasEMail,
+                       km4c:alternativeEmail.
+
+:cpfPessoa
+a owl:FunctionalProperty;
+rdfs:label "CPF"@pt;
+rdfs:comment "Trata-se do Cadastro de Pessoa Física de uma pessoa."@pt.
+
+# Design annotations 
+ 
+:PessoaInstitucionalizada
+rdfs:label "Pessoa Institucionalizada"@pt;
+rdfs:comment "Refere-se a um indivíduo humano associado a uma Instituição de Ensino Superior."@pt;
+owl:equivalentClass scoro:EducationalRole,
+                    whois:academicCareer. #(whois)
+
+:orcidPessoaInstitucionalizada
+a owl:FunctionalProperty;
+rdfs:label "orcid"@pt;
+rdfs:comment "Diz respeito ao orcid de uma pessoa associada a uma Instituição."@pt;
+owl:equivalentProperty scoro:hasORCID.
+
+:lattesPessoaInstitucionalizada
+a owl:FunctionalProperty;
+rdfs:label "lattes"@pt;
+rdfs:comment "Diz respeito ao lattes de uma pessoa associada a uma Instituição."@pt;
+owl:equivalentProperty frapo:hasCurriculumVitae.
+
+# Design annotations 
+ 
+:Cadastrador
+rdfs:label "Cadastrador"@pt;
+rdfs:comment "Trata-se de quem cadastra as teses e as dissertações em um Acervo."@pt;
+owl:equivalentClass caresses:User.
+
+# Design annotations 
+ 
+:Digitalizador
+rdfs:label "Digitalizador"@pt;
+rdfs:comment "Trata-se de uma pessoa institucionalizada que digitaliza as teses e as dissertações."@pt.
+
+# Design annotations 
+ 
+:Discente
+rdfs:label "Discente"@pt;
+rdfs:comment "Na Educação Superior o verbete aluno refere-se ao estudante. Trata-se do enfoque no processo de aprendizagem, dos saberes discentes e dos diferentes tipos de estudantes (considerados em suas distinções pessoais e nas circunstâncias da academia)."@pt;
+owl:equivalentClass sio:SIO_000405,
+                    seo:Student.                    
+
+:matriculaDiscente
+a owl:FunctionalProperty;
+rdfs:label "matrícula do discente"@pt;
+rdfs:comment "A matrícula de um discente é o seu identificador único."@pt;
+owl:equivalentProperty dc:identifier.
+
+:telefoneDiscente
+a owl:FunctionalProperty;
+rdfs:label "telefone do discente"@pt;
+rdfs:comment "Diz respeito ao número de telefone do discente."@pt;
+owl:equivalentProperty foaf:phone.
+
+# Design annotations 
+ 
+:TrabalhoConclusaoCurso
+rdfs:label "Trabalho de Conclusão de Curso"@pt;
+rdfs:comment "Deve ser um trabalho acadêmico de finalização do curso, sendo necessariamente, pelo menos, na modalidade de uma monografia, ou outros trabalhos técnicos associados quando previstos.
+São trabalhos que retratam o resultado de estudo ou pesquisa sobre um tema, sejam eles exigidos por disciplina, módulo, estudo independente, curso e programa."@pt;
+owl:equivalentClass schema:Thesis,
+                    fabio:ScholarlyWork,
+                    frbrer:C1004,
+                    dbpedia:Trabalho_de_conclusão_de_curso.
+
+# Design annotations 
+ 
+:NaoBolsista
+rdfs:label "NaoBolsista"@pt;
+rdfs:comment "Aluno que faz parte de uma pesquisa acadêmica por espontânea vontade e sem retribuição financeira."@pt.
+
+# Design annotations 
+ 
+:Bolsista
+rdfs:label "Bolsista"@pt;
+rdfs:comment "É todo aluno que recebe uma Bolsa de Estudos."@pt;
+owl:equivalentClass scoro:FinancialRole,
+                    sio:SIO_000406.
+
+# Design annotations 
+ 
+:Contrato
+rdfs:label "Contrato"@pt;
+rdfs:comment "Diz respeito ao contrato de bolsa de estudos que é disponibilizado por um patrocinador (agência de fomento)."@pt;
+
+:inicioContrato
+a owl:FunctionalProperty;
+rdfs:label "início"@pt;
+rdfs:comment "Diz respeito a data de início referente um contrato que um bolsista recebe por bolsa de estudos."@pt;
+
+:fimContrato
+a owl:FunctionalProperty;
+rdfs:label "fim"@pt;
+rdfs:comment "Diz respeito a data fim em um contrato que um bolsista recebe por bolsa de estudos."@pt.
+
+# Design annotations 
+ 
+:BolsaEstudo 
+rdfs:label "Bolsa de Estudo"@pt;
+rdfs:comment "Trata-se de um patrocínio do governo."@pt;
+owl:equivalentClass frapo:scholarship,
+                    frapo:Studentship.
+
+# Design annotations 
+ 
+:Patrocinador
+rdfs:label "Patrocinador"@pt;
+rdfs:comment "Trata-se do patrocinador que disponibiliza Bolsa de Estudo."@pt;
+owl:equivalentClass frapo:FinancialEntity,
+                    frapo:FundingProgramme.
+
+:nomePatrocinador
+a owl:FunctionalProperty;
+rdfs:label "nome do patrocinador"@pt;
+rdfs:comment "Trata-se do nome do Patrocinador."@pt;
+
+# Design annotations 
+ 
+:pertenceIES
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "pertence"@pt .
+rdfs:comment "Acervo pertence a Instituição de Ensino Superior."@pt;
+
+# Design annotations 
+ 
+:ocorreNoAcervo
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "ocorre no acervo"@pt .
+rdfs:comment "Cadastro ocorre no Acervo."@pt;
+
+# Design annotations 
+ 
+:registraCadastro
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "registra cadastro"@pt .
+rdfs:comment "Cadastrador registra o Cadastro."@pt
+owl:equivalentPropert dcat:record,
+                      ptop:registeredIn.
+									
+# Design annotations 
+ 
+:elaboraTCC
+a owl:TransitiveProperty, owl:AsymmetricProperty;
+rdfs:label "elabora TCC"@pt .
+rdfs:comment "Discente elabora Trabalho de Conclusão de Curso."@pt
+owl:equivalentPropert scoro:research-student.
+
+# Design annotations 
+ 
+:referenteTCC
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "referente ao TCC"@pt .
+rdfs:comment "Cadastro é referente ao Trabalho de Conclusão de Curso."@pt;
+
+# Design annotations 
+ 
+:recebeContrato
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "recebe contrato"@pt .
+rdfs:comment "Bolsista recebe Contrato por Bolsa de Estudos."@pt
+owl:equivalentPropert frapo: supports,
+                      vivo:teachingOverview.
+
+# Design annotations 
+ 
+:porBolsaEstudos
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "por bolsa de estudos"@pt .
+rdfs:comment "Contrato por Bolsa de Estudos disponibilizadas por Patrocinador."@pt
+owl:equivalentPropert frapo:contributions-in-kind,
+                      scoro:controls-project-finances,
+                      voag:approves.
+
+# Design annotations 
+ 
+:disponibilizaBolsaEstudos
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "disponibiliza bolsa de estudos"@pt .
+rdfs:comment "Patrocinador disponibiliza Bolsa de Estudos."@pt
+owl:equivalentPropert frapo:contributions-in-kind,
+                      scoro:controls-project-finances,
+                      voag:approves.																	 

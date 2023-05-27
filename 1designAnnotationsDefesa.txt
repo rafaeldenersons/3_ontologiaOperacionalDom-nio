@@ -1,0 +1,604 @@
+# Design annotations 
+ 
+:Convenio
+rdfs:label "Convênio"@pt;
+rdfs:comment "Acordo firmado por organizações educacionais (instituições educacionais de ensino superior) para ofertar programas ou cursos de pós-graduação."@pt;
+owl:equivalentClass itsmo:Agreement.
+
+# Design annotations 
+ 
+:OrganizacaoEnsino
+rdfs:label "Organização de Ensino"@pt;
+rdfs:comment "Ente que trabalha com educação de ensino superior. Ele pode ser uma rede de ensino (quando existe) ou uma instituição de ensino superior isolada (quando a rede de ensino não existe). Esse ente é caracterizado por oferecer e gerir o curso de pós-graduação."@pt
+owl:equivalentClass pext:Educational Organization, #(Educational Organization)
+                    cwrc:EducationalOrganization,
+                    km4c:Higher_education.
+
+
+ 
+# Design annotations 
+ 
+:RedeEnsino
+rdfs:label "Rede de Ensino"@pt;
+rdfs:comment "É um coletivo de Instituição de Ensino Superior."@pt;
+owl:equivalentClass sio:SIO_000620.
+ 
+# Design annotations
+
+:InstituicaoEnsinoSuperior
+rdfs:label "Instituição de Ensino Superior"@pt;
+rdfs:comment "Diz respeito à Instituição que fornece um ensino superior aceito pela autoridade competente e faz parte da integração do sistema de ensino superior"@pt;
+owl:equivalentClass wdo:Q2385804, #(educational institution)
+                    wdo:Q5341295, #(educational organization)
+                    wdo:Q1211427, # (academia)
+                    schema:EducationalOrganization,                                 
+                    cwrc:EducationalOrganization,
+                    sio:SIO_000290,
+                    dbo:EducationalInstitution,
+                    pext:EducationalOrganization,
+                    pext:University.
+rdfs:comment "Bases promissoras para reconciliação de indivíduos e enriquecimento semântico com owl:sameAs = wde".
+
+:siglaIES 
+a owl:FunctionalProperty;
+rdfs:label "sigla da IES"@pt;
+rdfs:comment "Acrônimo da Instituição de Ensino Superior"@pt;
+owl:equivalentProperty vivo:abbreviation.
+
+:nomeIES
+a owl:FunctionalProperty;
+rdfs:label "nome da IES"@pt;
+rdfs:comment "Nome completo e por extenso da Instituição de Ensino Superior"@pt;
+owl:equivalentProperty bibframe:grantingInstitution,
+                       wdo:PP1813, # (short name).
+
+:uriIES
+a owl:functionalProperty
+rdfs:label "uri da IES"@pt
+rdfs:comment "URI da Instituição de Ensino Superior"@pt
+owl:equivalentProperty dqm:hasURI. 
+
+:unidadeIES
+a owl:functionalProperty
+rdfs:label "unidade"@pt
+rdfs:comment "unidade da Instituição de Ensino Superior (IES). Diz respeito ao campus da IES. É definido com o termo 'Campus' seguido do município que a IES está localizada."@pt.
+
+:cnpjIES
+a owl:functionalProperty
+rdfs:label "CNPJ"@pt
+rdfs:comment "Diz respeito ao Cadastro de Pessoa Jurídica da IES."@pt. 
+
+# Design annotations 
+ 
+:CondicaoAprovacao
+rdfs:label "Condição para Aprovação"@pt;
+rdfs:comment "Trata-se de cada pré-requisito para aprovação no curso stricto sensu."@pt;
+owl:equivalentClass schema: coursePrerequisites,
+                    crsw: Pre-requisite.
+								 
+# Design annotations 
+ 
+:ProgramaPosGraduacao
+rdfs:label "Programa de Pós-Graduação"@pt;
+rdfs:comment "Trata-se de uma programação de curso de pós-graduação que são criados quando constatados da sua viabilidade, relevância e número adequado de professores pesquisadores com titulação e produção científica suficientes para dar sustentação à criação de curso de mestrado e/ou doutorado em determinada área de conhecimento, bem como a sua adequação aos critérios da Coordenação de Aperfeiçoamento de Pessoal do Ensino Superior - Capes para apresentação e propostas de cursos novos. Programa de Pós-Graduação pode ser gerido por uma única Instituição de Ensino Superior ou por Rede de Ensino. Assim, compreende programa de mestrado, doutorado, cursos de especialização, aperfeiçoamento, dentre outros, e são abertos a candidatos diplomados em cursos de graduação e que atendam os requisitos das instituições de ensino. Compreende programas de mestrado e doutorado."@pt;
+owl:equivalentClass fabio:AcademicProceedings,
+                    schema:EducationalOccupationalProgram,
+                    teach:StudyProgram, #(teach)
+                    xapi:Grouping.
+
+:nomeProgramaPosGraduacao
+a owl:FunctionalProperty;
+rdfs:label "nome"@pt;
+rdfs:comment "Trata-se de uma programação de curso de pós-graduação que são criados quando constatados da sua viabilidade, relevância e número adequado de professores pesquisadores com titulação e produção científica suficientes para dar sustentação à criação de curso de mestrado e/ou doutorado em determinada área de conhecimento, bem como a sua adequação aos critérios da Coordenação de Aperfeiçoamento de Pessoal do Ensino Superior - Capes para apresentação e propostas de cursos novos."@pt;
+owl:equivalentProperty xapi:hasName.
+
+
+ # Design annotations 
+ 
+:CursoPosGraduacao
+rdfs:label "Curso de Pós-Graduação"@pt;
+rdfs:comment "Arranjo de disciplinas e atividades estruturadas em assuntos amplos ou particulares do conhecimento, visando auxiliar aos objetivos educacionais determinados pela instituição e de acordo com as diretrizes curriculares. São aplicados ao programa de pós-graduação, seja gerido por uma única Instituição de Ensino Superior ou por Rede de Ensino. Curso de pós-graduação stricto sensu, compreende programas de mestrado e doutorado que atendem às exigências de autorização, reconhecimento e renovação de reconhecimento previstas na legislação. Os cursos de pós-graduação de mestrado e doutorado profissionais visam contribuir para o incremento da qualificação da prática e experimental profissional, concedendo competências para avaliação crítica, intervenção e resposta a problemas a ela relacionados, bem como a realização de tecnologias aplicadas ao trabalho."@pt;
+owl:equivalentClass wdo:Q600134, # (course)
+                    schema:Course.
+
+:nomeCursoPosGraduacao
+a owl:FunctionalProperty;
+rdfs:label "nome"@pt;
+rdfs:comment "nome do curso de pós-graduação"@pt;
+owl:equivalentProperty dc:title,
+                       teach:courseTitle. #(teach)
+
+# Design annotations 
+ 
+:CursoProfissional
+rdfs:label "Curso Profissional"@pt ;
+rdfs:comment "Pretende colaborar para o acréscimo da qualificação da prática profissional, fornecendo competências para avaliação crítica, interferência e resolução de problemas, e também objetivando o desenvolvimento de tecnologias aplicadas ao trabalho."@pt.
+
+# Design annotations 
+ 
+:CursoAcademico
+rdfs:label "Curso Acadêmico"@pt ;
+rdfs:comment "."@pt;
+
+# Design annotations 
+ 
+:Mestrado
+rdfs:label "Mestrado"@pt ;
+rdfs:comment "Trata-se de um curso de pós-graduação stricto sensu que visa amplificar e aperfeiçoar a competência didática, científica, cultural e profissional dos indivíduos graduados."@pt;
+owl:equivalentClass wdo:Q4218455, #qualification
+                    wdo:Q18189, #educational stage 
+                    wdo:Q189533, # academic degree 
+                    wdo:Q26269989. # degree of difficulty 
+
+
+# Design annotations 
+ 
+:Doutorado
+rdfs:label "Doutorado"@pt ;
+rdfs:comment "Diz respeito a um curso de pós-graduação stricto sensu visa propiciar formação científica e cultural aprofundada, formando profissionais com a finalidade de desenvolver formas independentes de atividades de ensino, pesquisa e inovação, e também para atuar na formação de profissionais de alta qualificação científica e técnico-profissional (no âmbito de uma área específica de conhecimento)."@pt.
+
+# Design annotations 
+ 
+:Produto
+rdfs:label "Produto"@pt;
+rdfs:comment "Produto é o resultado técnico-científico (projeto experimental ou produto técnico) de um curso de Programa de Pós-Graduação Stricto Sensu (também conhecido como mestrado ou doutorado profissional). É o produto técnico/tecnológico ou trabalho final de pós-graduação como resultado de um curso profissional de Pós-Graduação junto a tese quando mestrado, ou anexo ao doutorado quando se trata de uma tese."@pt;
+owl:equivalentClass schema: IndividualProduct.
+
+# Design annotations 
+ 
+:Tese
+rdfs:label "Tese"@pt;
+rdfs:comment "Colaboração acadêmica original para o conhecimento e apresentada para obter o grau acadêmico de doutor e dos títulos universitários livre-docente e professor titular. Constitui o trabalho de pesquisa original e individual que forneça contribuição importante para a área de conhecimento na qual está inserida."@pt;
+owl:equivalentClass fabio:DoctoralThesis,
+                    fabio:Thesis,
+                    fabio:Proposition.
+
+
+# Design annotations 
+ 
+:Dissertação
+rdfs:label "Dissertação"@pt;
+rdfs:comment "owl:class Curso Dissertação é o resultado de um trabalho de pesquisa desenvolvido, documentado e defendido publicamente em cursos de pós-graduação de mestrado, destinado a obtenção do grau acadêmico de mestre."@pt;
+owl:equivalentClass bibframe:Dissertation,
+                    fabio: MastersThesis,
+                    sio:SIO_000167. #(dissertação)
+
+# Design annotations 
+ 
+:TrabalhoConclusaoCurso
+rdfs:label "Trabalho de Conclusão de Curso"@pt;
+rdfs:comment "Deve ser um trabalho acadêmico de finalização do curso, sendo necessariamente, pelo menos, na modalidade de uma monografia, ou outros trabalhos técnicos associados quando previstos.
+São trabalhos que retratam o resultado de estudo ou pesquisa sobre um tema, sejam eles exigidos por disciplina, módulo, estudo independente, curso e programa."@pt;
+owl:equivalentClass schema:Thesis,
+                    fabio:ScholarlyWork,
+                    frbrer:C1004,
+                    dbpedia:Trabalho_de_conclusão_de_curso.
+
+
+
+# Design annotations 
+ 
+:Discente
+rdfs:label "Discente"@pt;
+rdfs:comment "Na Educação Superior o verbete aluno refere-se ao estudante. Trata-se do enfoque no processo de aprendizagem, dos saberes discentes e dos diferentes tipos de estudantes (considerados em suas distinções pessoais e nas circunstâncias da academia)."@pt;
+owl:equivalentClass sio:SIO_000405,
+                    seo:Student.
+                    # para indivíduo -> scoro: postgraduate-student.
+
+:matriculaDiscente
+a owl:FunctionalProperty;
+rdfs:label "matrícula do discente"@pt;
+rdfs:comment "A matrícula de um discente é o seu identificador único."@pt;
+owl:equivalentProperty dc:identifier.
+
+:telefoneDiscente
+a owl:FunctionalProperty;
+rdfs:label "telefone do discente"@pt;
+rdfs:comment "Diz respeito ao número de telefone do discente."@pt;
+owl:equivalentProperty foaf:phone.
+
+# Design annotations 
+ 
+:DiscenteEgresso
+rdfs:label "Discente Egresso"@pt;
+rdfs:comment "."@pt;
+
+
+# Design annotations 
+ 
+:Defesa
+rdfs:label "Defesa"@pt ;
+rdfs:comment "."@pt;
+owl:equivalentClass schema:EducationEvent,
+                    sro:Evaluation,
+                    sro:Discussion,
+                    sro:Argument,
+                    sro:Claim.
+
+dataHoraAvaliacaoDefesa
+a owl:FunctionalProperty;
+rdfs:label "data e hora de avaliação"@pt;
+rdfs:comment "Diz respeito a data e a hora de avaliação de uma defesa."@pt;
+owl:equivalentProperty fabio:hasDecisionDate,
+                       dcat:record,
+                       ptop:registeredIn.
+
+codigoDefesa
+a owl:FunctionalProperty;
+rdfs:label "código da Defesa"@pt;
+rdfs:comment "Diz respeito ao identificador único de uma defesa."@pt;
+owl:equivalentProperty dc:identifier.
+
+# Design annotations 
+ 
+:Local
+rdfs:label "Local"@pt;
+rdfs:comment "Trata-se do lugar físico ou virtual de registro do Trabalho de Conclusão de Curso. Quanto ao local físico, refere-se ao nome da cidade de apresentação do trabalho acadêmico. Neste caso, refere-se ao Trabalho de Conclusão de Curso de pós-graduação stricto sensu (dissertação ou tese). Quando se refere ao local virtual, diz respeito ao nome do caminho ou diretório de um computador ou no âmbito Web."@pt;
+owl:equivalentClass bibframe:Place,
+                    schema:Place,
+                    dc:Location.
+								 
+# Design annotations 
+ 
+:Banca
+rdfs:label "Banca"@pt;
+rdfs:comment "Trata-se da composição de membros (no mínimo três titulares e um suplente) para avaliar a defesa de um estudante de pós-graduação em uma Instituição de Ensino Superior."@pt;
+owl:equivalentClass fabio:ExaminationPaper,
+                    scoro:ContributionSituation. #(scoro)
+
+
+# Design annotations 
+ 
+:DocumentoAprovacao
+rdfs:label "Documento de Aprovação"@pt;
+rdfs:comment " "@pt;
+owl:equivalentClass schema: EducationalOccupationalCredential,
+                    fabio: Diary.
+
+
+# Design annotations 
+ 
+:Coorientador
+rdfs:label "Coorientador"@pt;
+rdfs:comment "É membro da Banca Examinadora (BRASIL, 2022b) que é caracterizado por acompanhar o processo de tutoria, direcionar e apoiar ao aluno orientando em uma série de aspectos pesquisados, que são decisivos na formação dos futuros orientadores e pesquisadores."@pt;
+owl:equivalentClass mrel:ths,
+                    sio:SIO_000878, #(Orientador)
+                    mrel:Thesisadvisor.
+
+# Design annotations 
+ 
+:Orientador
+rdfs:label "Orientador"@pt;
+rdfs:comment "É membro e presidente da Banca Examinadora. Caracteriza-se pelo processo de acompanhamento, tutoria, direcionamento e apoio ao estudante orientando em uma série de aspectos pesquisados, que são decisivos na formação dos futuros orientadores e pesquisadores."@pt;
+owl:equivalentClass mrel:ths,
+                    sio:SIO_000878, # (Orientador)
+                    mrel:Thesisadvisor.
+
+ 
+# Design annotations 
+ 
+:DocumentoAprovacao
+rdfs:label "Documento de Aprovação"@pt;
+rdfs:comment " "@pt;
+owl:equivalentClass schema: EducationalOccupationalCredential,
+                    fabio: Diary.
+								 
+
+# Design annotations 
+ 
+:Examinador
+rdfs:label "Examinador"@pt;
+rdfs:comment "Trata-se de integrante da comissão examinadora de defesa de qualificação, dissertação ou tese. É o membro que recebe o convite para participar de uma banca de defesa de qualificação, dissertação ou tese."@pt;
+owl:equivalentClass sur:Participant,
+                    cwmo:Evaluator.
+
+ 
+
+# Design annotations 
+ 
+:ExaminadorExterno
+rdfs:label "Examinador Externo"@pt ;
+rdfs:comment "."@pt;
+owl:equivalentClass sur:Participant,
+                    cwmo:Evaluator.								 
+ 
+ 
+# Design annotations 
+ 
+:ExaminadorInterno
+rdfs:label "Examinador Interno"@pt ;
+rdfs:comment "."@pt;
+owl:equivalentClass sur:Participant,
+                    cwmo:Evaluator.
+
+
+# Design annotations 
+ 
+:Membro
+rdfs:label "Membro"@pt;
+rdfs:comment "Trata-se de integrante da comissão examinadora de defesa de qualificação, dissertação ou tese interno ou externo ao programa de pós-graduação e à Instituição que participa."@pt;
+owl:equivalentClass foaf:Group,
+                    scoro:EducationalRole,
+                    vivo:MemberRole.
+
+# Design annotations 
+ 
+:PessoaInstitucionalizada
+rdfs:label "Pessoa Institucionalizada"@pt;
+rdfs:comment "Refere-se a um indivíduo humano associado a uma Instituição de Ensino Superior."@pt;
+owl:equivalentClass scoro:EducationalRole,
+                    whois:academicCareer. #(whois)
+
+:orcidPessoaInstitucionalizada
+a owl:FunctionalProperty;
+rdfs:label "orcid"@pt;
+rdfs:comment "Diz respeito ao orcid de uma pessoa associada a uma Instituição."@pt;
+owl:equivalentProperty scoro:hasORCID.
+
+:lattesPessoaInstitucionalizada
+a owl:FunctionalProperty;
+rdfs:label "lattes"@pt;
+rdfs:comment "Diz respeito ao lattes de uma pessoa associada a uma Instituição."@pt;
+owl:equivalentProperty frapo:hasCurriculumVitae.
+
+# Design annotations 
+ 
+:VocabularioModalidadeParticipacao a skos:ConceptScheme;
+skos:prefLabel "Vocabulário de Modalidade de Participação"@pt;
+skos:note "Lista de vocabulários para a classificação da modalidade de participação dos membros na IES, disponível na Portaria nº 4.059, de 10 de Dezembro de 2004 (DOU de 13/12/2004, Seção 1, p. 34) e na Resolução nº 4, de 11 de Dezembro de 2018."@pt .
+
+:ADistancia a skos:Concept ;
+skos: topConceptOf:VocabularioModalidadeParticipacao;
+skos: inScheme:VocabularioModalidadeParticipacao;
+skos:prefLabel "A Distância"@pt .
+
+:Presencial a skos:Concept ;
+skos: topConceptOf:VocabularioModalidadeParticipacao;
+skos: inScheme:VocabularioModalidadeParticipacao;
+skos:prefLabel "Presencial"@pt .
+
+:SemiPresencial a skos:Concept ;
+skos: topConceptOf:VocabularioModalidadeParticipacao;
+skos: inScheme:VocabularioModalidadeParticipacao;
+skos:prefLabel "Semi-Presencial"@pt .
+
+# Design annotations 
+ 
+:Pessoa
+rdfs:label "Pessoa"@pt;
+rdfs:comment "Criatura humana ou indivíduo humano enquanto sujeito de direitos e deveres."@pt;
+owl:equivalentClass schema:Person.
+
+:nomePessoa
+a owl:FunctionalProperty;
+rdfs:label "nome da pessoa"@pt;
+rdfs:comment "Nome completo e por extenso da pessoa"@pt;
+owl:equivalentProperty foaf:name,
+                       dc:name.
+
+:funcaoPessoa
+a owl:FunctionalProperty;
+rdfs:label "função"@pt;
+rdfs:comment "Função exercida por uma pessoa."@pt;
+owl:equivalentProperty bibframe:role.
+
+:emailInstitucionalPessoa
+a owl:FunctionalProperty;
+rdfs:label "e-mail institucional"@pt;
+rdfs:comment "Trata-se do e-mail Institucional de uma pessoa."@pt;
+owl:equivalentProperty foaf:mbox,
+                       pext:hasEMail.
+
+:emailAlternativoPessoa
+a owl:FunctionalProperty;
+rdfs:label "e-mail alternativo"@pt;
+rdfs:comment "Trata-se do e-mail alternativo de uma pessoa."@pt;
+owl:equivalentProperty foaf:mbox,
+                       pext:hasEMail,
+                       km4c:alternativeEmail.
+
+:cpfPessoa
+a owl:FunctionalProperty;
+rdfs:label "CPF"@pt;
+rdfs:comment "Trata-se do Cadastro de Pessoa Física de uma pessoa."@pt. 								 
+
+# Design annotations 
+ 
+:temConvenio
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "tem convênio"@pt .
+rdfs:comment "Celebrar convênio. Essa relação é opcional pois ela pode existir ou não."@pt
+owl:equivalentPropert itsmo:hasAgreement.
+
+# Design annotations 
+ 
+:ofereceCursoPosGreaduacao
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "oferece curso de pós-graduação"@pt .
+rdfs:comment "Organização de Ensino oferece Curso de Pós-Graduação."@pt.
+owl:equivalentPropert schema:hasCourseInstance,
+                      schema:hasCourse,
+                      schema:course,
+                      ov:deliveredBy, #(ov)
+                      ov:offersCourse. #(ov)
+									
+# Design annotations 
+ 
+:geridoOrganizacaoEnsino 
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "é gerido por Organização de Ensino"@pt .
+rdfs:comment "Curso de Pós-Graduação é gerido por Organização de Ensino."@pt
+owl:equivalentPropert base-gleif:isManagedBy,
+                      poder:hasAcademicOrganization,
+                      poder:organizationParticipant.
+
+# Design annotations 
+ 
+:pertenceOrganizacaoEnsino
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "pertence a Organização de Ensino"@pt .
+rdfs:comment "Programa de Pós-Graduação pertence a Organização de Ensino."@pt
+owl:equivalentPropert poder:hasAcademicOrganization,
+                      poder:organizationParticipant.
+
+# Design annotations 
+ 
+:compostoPorOrganizacaoEnsino
+a owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+rdfs:label "é composta por IES"@pt.
+rdfs:comment "Rede de Ensino é composta por Organização de Ensino."@pt
+owl:equivalentProperty ov:composedBy,
+                       essglobal:isComposedBy.
+
+# Design annotations 
+ 
+:compostoPorCursoPosGraduacao
+a owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+rdfs:label "é composto por Cursos de Pós-Graduação"@pt .
+rdfs:comment "Programa de Pós-Graduação é composto por Cursos de Pós-Graduacao."@pt
+owl:equivalentProperty ov:composedBy,
+                       essglobal:isComposedBy,
+                       schema:hasCourseInstance,
+                       schema:hasCourse,
+                       schema:course,
+                       ov:deliveredBy, #(ov)
+                       ov:offersCourse. #(ov).
+
+# Design annotations 
+ 
+:estabeleceCondicaoAprovacao
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "estabelece"@pt .
+rdfs:comment "Curso de Pós-Graduação estabelece Condição para Aprovação."@pt
+owl:equivalentPropert schema:coursePrerequisites,
+                      schema:programPrerequisites,
+                      voag:hasApprovalProcess.
+
+# Design annotations 
+ 
+:temComoResultadoProduto
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "tem como resultado um produto"@pt .
+rdfs:comment "Curso Profissional tem como resultado um Produto."@pt
+
+# Design annotations 
+ 
+:finalizadoComTese
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "é finalizado com tese"@pt .
+rdfs:comment "Doutorado é finalizado com Tese."@pt
+
+# Design annotations 
+ 
+:finalizadoComDissertacao
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "é finalizado com dissertação"@pt .
+rdfs:comment "Mestrado é finalizado com Dissertação."@pt
+
+
+#bibiframe: http://id.loc.gov/ontologies/bibframe/degree
+
+# Design annotations 
+ 
+:elaboraTCC
+a owl:TransitiveProperty, owl:AsymmetricProperty;
+rdfs:label "elabora TCC"@pt .
+rdfs:comment "Discente elabora Trabalho de Conclusão de Curso."@pt
+owl:equivalentPropert scoro:research-student.
+
+# Design annotations 
+ 
+:realizaDefesa
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "realiza a defesa"@pt .
+rdfs:comment "Discente realiza a Defesa."@pt
+owl:equivalentPropert fabio:hasDecisionDate.
+
+# Design annotations 
+ 
+:orientaTCC
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "orienta TCC"@pt .
+rdfs:comment "Orientador orienta Trabalho de Conclusão de Curso."@pt
+
+# Design annotations 
+ 
+:coorientaTCC
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "coorienta TCC"@pt .
+rdfs:comment "Coorientador coorienta Trabalho de Conclusão de Curso."@pt
+
+# Design annotations 
+ 
+:referenteTCC
+a owl:TransitiveProperty, owl:ReasonerProperty, owl:SymetricProperty;
+rdfs:label "é referente ao TCC"@pt .
+rdfs:comment "Defesa é referente ao Trabalho de Conclusão de Curso."@pt
+
+# Design annotations 
+ 
+:realizaDefesa
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "realiza a defesa"@pt .
+rdfs:comment "Discente realiza a Defesa."@pt
+owl:equivalentPropert fabio:hasDecisionDate.
+
+# Design annotations 
+ 
+:ocorreEmUmLocal
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "ocorre em um local"@pt .
+rdfs:comment "Defesa ocorre em um Local."@pt
+owl:equivalentPropert scoro:research-student.
+
+# Design annotations 
+ 
+:avaliaDefesa
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "avalia banca"@pt .
+rdfs:comment "Banca avalia a Defesa."@pt
+owl:equivalentPropert schema: assesses,
+                      pproc:criterionEvaluationMode.
+									
+# Design annotations 
+ 
+:geraDocumentoAprovacao
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "gera documento de aprovação"@pt .
+rdfs:comment "Defesa gera Documento de Aprovação."@pt
+owl:equivalentPropert schema: occupationalCredentialAwarded,
+                      bibiframe: degree,
+                      schema: coursePrerequisites,
+                      schema: programPrerequisites,
+                      voag: hasApprovalProcess.
+
+# Design annotations 
+ 
+:compostaPorMembro
+a owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+rdfs:label "é composta por Membro"@pt .
+rdfs:comment "Banca é composta por Membro."@pt
+owl:equivalentProperty ov:composedBy,
+                       essglobal:isComposedBy,
+                       xapi:hasMember,
+                       skos:member,
+                       bibframe:agentOf.
+
+
+# Design annotations 
+ 
+:associadaIES
+a owl:TransitiveProperty, owl: ReasonerProperty, owl:SymetricProperty;
+rdfs:label "é associada"@pt .
+rdfs:comment "Pessoa Institucionalizada é associada a Instituição de Ensino Superior."@pt
+owl:equivalentPropert rico:teachingRelationHasSource,
+                      bibframe:grantingInstitution.
+
+# Design annotations 
+
+:temModalidadeParticipacao
+a owl:ObjectProperty, owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:FunctionalProperty;
+rdfs:label "tem modalidade de participação"@pt;									
+
+
+									

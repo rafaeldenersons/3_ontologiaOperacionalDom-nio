@@ -1,0 +1,96 @@
+# Design annotations 
+ 
+:TrabalhoConclusaoCurso
+rdfs:label "Trabalho de Conclusão de Curso"@pt;
+rdfs:comment "Deve ser um trabalho acadêmico de finalização do curso, sendo necessariamente, pelo menos, na modalidade de uma monografia, ou outros trabalhos técnicos associados quando previstos.
+São trabalhos que retratam o resultado de estudo ou pesquisa sobre um tema, sejam eles exigidos por disciplina, módulo, estudo independente, curso e programa."@pt;
+owl:equivalentClass schema:Thesis,
+                    fabio:ScholarlyWork,
+                    frbrer:C1004,
+                    dbpedia:Trabalho_de_conclusão_de_curso.
+								 
+# Design annotations 
+ 
+:AreaConhecimento
+rdfs:label "Área do Conhecimento do CNPq"@pt ;
+rdfs:comment "Grupo de informações e referenciais metódicos, agrupados segundo um ponto de vista, que sustenta relações de complementaridade recíproca. No Brasil, uma classificação difundida e que tem sido utilizada para a pesquisa e a pós-graduação, é a classificação de Áreas do Conhecimento do CNPq. Sua classificação original apresentou uma hierarquização em quatro níveis. Trata-se das áreas do conhecimento indicadas pelo CNPq."@pt.								 
+
+# Design annotations 
+ 
+:AreaPrimaria
+rdfs:label "Área Primária"@pt ;
+rdfs:comment "Refere-se à primeira área de concentração de uma linha de pesquisa."@pt.
+
+# Design annotations 
+ 
+:AreaSecundaria
+rdfs:label "Área Secundária"@pt ;
+rdfs:comment "Refere-se à segunda área de concentração de uma linha de pesquisa."@pt.
+
+# Design annotations 
+ 
+:AreaTerciaria
+rdfs:label "Área Terciária"@pt ;
+rdfs:comment "Refere-se à terceira área de concentração de uma linha de pesquisa."@pt.
+
+# Design annotations 
+ 
+:GrandeArea
+rdfs:label "Grande Área"@pt ;
+rdfs:comment "Diz respeito ao 1º nível da área de conhecimento do CPNq. Trata-se da aglomeração de diversas áreas do conhecimento devido a afinidade de seus objetos, métodos cognitivos e recursos instrumentais representando contextos sociopolíticos específicos."@pt.
+
+# Design annotations 
+ 
+:Area
+rdfs:label "Área"@pt ;
+rdfs:comment "Trata-se do 2º nível da área de conhecimento do CNPq, ou seja, é o conjunto de conhecimentos interrelacionados, construídos coletivamente, reunidos segundo a natureza do tema de investigação com objetivos de ensino, pesquisa e aplicações experimentais."@pt;
+owl:equivalentClass bibframe:Topic,
+                    sio:SIO_001340,
+                    dbo:Area.
+ 
+
+# Design annotations 
+ 
+:Subarea
+rdfs:label "Subárea"@pt ;
+rdfs:comment "É o fracionamento da área do conhecimento definida com base no objeto de estudo e procedimentos metodológicos aceitos e amplamente usados. Diz respeito ao 3º nível da área de conhecimento do CNPq."@pt.
+
+# Design annotations 
+ 
+:Especialidade
+rdfs:label "Especialidade"@pt ;
+rdfs:comment "Trata-se do 4º nível da área de conhecimento do CNPq. É a caracterização temática da atividade de ensino e pesquisa. Ela pode ser incorporada em distintas grandes áreas, áreas e subáreas."@pt. 
+
+# Design annotations 
+ 
+:vinculado
+a owl:asymmetric
+a owl:irreflexive
+rdfs:label: "é vinculado"@pt
+rdfs:comment "Trabalho de Conclusão de Curso é vinculado a Área de Conhecimento do CNPq."@pt;
+owl:equivalentPropert dc:title.
+ 
+# Design annotations 
+ 
+:compostaPorArea
+a owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+rdfs:label "composta por Área"@pt .
+rdfs:comment "Significa que GrandeArea é composta por Area."@pt;
+owl:equivalentPropert dc:title.
+
+# Design annotations 
+ 
+:compostaPorSubarea
+a owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+rdfs:label "composta por Área."@pt .
+rdfs:comment "Significa que Area é composta por Subarea."@pt;
+owl:equivalentPropert dc:title.
+
+# Design annotations 
+ 
+:compostaPorEspecialidade
+a owl:AsymmetricProperty, owl:IrreflexiveProperty ;
+rdfs:label "composta por Especialidade."@pt .
+rdfs:comment "Significa que Subarea é composta por Especialidade."@pt;
+owl:equivalentPropert dc:title. 
+ 
